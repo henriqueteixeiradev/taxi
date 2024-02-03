@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pingpong-ball {
+  animation: pingpong 0.8s infinite; /* 2s para uma ida e volta completa */
+}
+
+@keyframes pingpong {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  20% {
+    transform: translateY(-10px) scaleY(0.8);
+  }
+  40% {
+    transform: translateY(-20px) scaleY(0.7);
+  }
+  60% {
+    transform: translateY(-25px) scaleY(0.8);
+  }
+  80% {
+    transform: translateY(-20px) scaleY(0.9);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.inset-shadow {
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.2),
+    inset -10px -10px 10px rgba(0, 0, 0, 0.2),
+    -1px -1px 10px rgba(255, 255, 255, 0.1);
+}
+
+.shadow-social-button {
+  box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.1),
+    -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.shadow-submit-button {
+  box-shadow: -1px -1px 10px rgba(255, 188, 7, 05);
+}
+
+.stage-bg-image {
+  background-image: url("/img/bg-stage-image.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  min-height: 100vh;
+}

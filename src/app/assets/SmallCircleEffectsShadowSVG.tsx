@@ -1,3 +1,7 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 type SmallCircleEffectsShadowSVGProps = "small" | "normal";
 
 export function SmallCircleEffectsShadowSVG({
@@ -5,8 +9,16 @@ export function SmallCircleEffectsShadowSVG({
 }: {
   intent?: SmallCircleEffectsShadowSVGProps;
 }) {
+  const usePath = usePathname();
+
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={65} height={65} fill="none">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={65}
+      height={65}
+      fill="none"
+      className={usePath === "/" ? "pingpong-ball" : ""}
+    >
       <g
         filter="url(#a)"
         className={intent === "small" ? "scale-[47.61%]" : ""}

@@ -48,7 +48,7 @@ export default function StagesPages() {
   }
 
   return (
-    <section className="flex flex-col items-center px-8 relative">
+    <section className="flex flex-col items-center px-8 relative stage-bg-image">
       <div className="mt-20">
         <Logo intent="small" />
       </div>
@@ -65,13 +65,15 @@ export default function StagesPages() {
       </div>
 
       <div className="flex items-center justify-between w-full mt-[4.375rem]">
-        <div>
+        <div className="">
           <Heading level={1} color={"primary"} font={"black"}>
             {data[current].title}
           </Heading>
+
           <Heading level={2} font={"bold"}>
             {data[current].subtitle}
           </Heading>
+
           <p className="text-base max-w-[196px] mt-2">
             {data[current].description}
           </p>
@@ -79,7 +81,7 @@ export default function StagesPages() {
 
         <button
           onClick={handleNext}
-          className="flex translate-x-[20px] z-10 items-center justify-center shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] shadow-white  rounded-full right-[10px] w-[4.938rem] h-[4.938rem]"
+          className="flex translate-x-[20px] z-10 items-center justify-center shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] shadow-white  rounded-full right-[10px] w-[4.938rem] h-[4.938rem] mb-3"
         >
           <svg
             width="30"
@@ -92,8 +94,8 @@ export default function StagesPages() {
             <path
               d="M30 5L7 28L28.5 50.5"
               stroke="white"
-              stroke-width="9"
-              stroke-linecap="round"
+              strokeWidth="9"
+              strokeLinecap="round"
             />
           </svg>
         </button>
